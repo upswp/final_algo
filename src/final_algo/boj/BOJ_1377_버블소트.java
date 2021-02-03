@@ -48,7 +48,7 @@ public class BOJ_1377_버블소트 {
 		int count = 0;
 		while(!pq.isEmpty()) {
 			A a = pq.poll();
-			//원래 index와 정렬한 현재 index의 차이를 구한다.
+			//원래 index와 정렬한 현재 index의 차이를 구한다. 
 			if(max < a.i - count) max = a.i - count;
 			count++;
 		}
