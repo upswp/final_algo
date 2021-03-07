@@ -8,8 +8,6 @@ public class Programmers_베스트앨범 {
 
 	static class Solution {
 		public static ArrayList<Integer> solution(String[] genres, int[] plays) {
-			int max = Integer.MIN_VALUE;
-			int first = 0, second = 0;
 			ArrayList<Integer> bestAlbum = new ArrayList<>();
 			HashMap<String, Integer> totalGenreMap = new HashMap<>();
 
@@ -24,6 +22,8 @@ public class Programmers_베스트앨범 {
 
 			// 2. 장르 내에서 많이 재생된 노래를 먼저 수록
 			for (int i = 0; i < sortGenre.size(); i++) {
+				int max = Integer.MIN_VALUE;
+				int first = 0, second = 0;
 				String genreTitle = sortGenre.get(i);
 				// genreTitle과 이름이 같은 장르를 가져온다.
 				for (int j = 0; j < genres.length; j++) {
@@ -55,8 +55,8 @@ public class Programmers_베스트앨범 {
 		}
 
 		public static void main(String[] args) {
-			String[] genres = new String[] { "classic", "pop", "classic", "classic", "pop", "k-pop" };
-			int[] plays = new int[] { 500, 600, 500, 800, 600, 5000 };
+			String[] genres = new String[] { "classic", "pop", "classic", "classic", "pop" };
+			int[] plays = new int[] { 500, 600, 150, 800, 2500 };
 			System.out.println(solution(genres, plays));
 		}
 	}
